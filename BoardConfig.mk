@@ -168,9 +168,12 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_SOURCE := kernel/essential/msm8998
 TARGET_KERNEL_CONFIG := artemis_mata_defconfig
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := 7.0.0-DragonTC-20180715
-export CROSS_COMPILE_ARM32 = prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
+USE_CCACHE := false
+KERNEL_TOOLCHAIN_PREFIX := /home/vladutadumitroaie21/aosip/prebuilts/gcc/linux-x86/aarch64/test1/bin/aarch64-unknown-linux-android-
+# TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+# KERNEL_TOOLCHAIN := prebuilts/gcc/linux-x86/aarch64/arm64-gcc8/bin
+export CROSS_COMPILE_ARM32 = prebuilts/gcc/linux-x86/arm/test1/bin/arm-cortex_a8-linux-gnueabi-
+# export CROSS_COMPILE = prebuilts/gcc/linux-x86/aarch64/arm64-gcc8/bin/aarch64-linux-gnu-
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
